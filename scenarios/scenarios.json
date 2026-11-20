@@ -1,0 +1,52 @@
+[
+  {
+    "name": "baseline",
+    "description": "Current ownership, 300 visitor cars, 400 m walking limit for cars",
+    "visitor_cars": 300
+  },
+  {
+    "name": "growth_2030",
+    "description": "Car ownership up 40% and two-wheelers up 20%, no new parking",
+    "car_ownership_multiplier": 1.4,
+    "two_wheeler_ownership_multiplier": 1.2,
+    "visitor_cars": 380
+  },
+  {
+    "name": "core_pricing",
+    "description": "Growth case with paid parking in the academic core: 30% of resident car trips to the core switch to cycling, walking or the campus shuttle",
+    "car_ownership_multiplier": 1.4,
+    "two_wheeler_ownership_multiplier": 1.2,
+    "visitor_cars": 380,
+    "core_car_shift": 0.3
+  },
+  {
+    "name": "multilevel",
+    "description": "Growth case with a 300-bay multilevel car park added to two academic-core zones",
+    "car_ownership_multiplier": 1.4,
+    "two_wheeler_ownership_multiplier": 1.2,
+    "visitor_cars": 380,
+    "extra_car_bays": { "Academic P1": 150, "Academic P2": 150 }
+  },
+  {
+    "name": "convocation",
+    "description": "Baseline weekday plus convocation traffic: 900 guest cars and 300 two-wheelers to the auditorium between 08:00 and 10:00",
+    "visitor_cars": 300,
+    "events": [
+      {
+        "name": "convocation",
+        "cluster": "auditorium",
+        "cars": 900,
+        "two_wheelers": 300,
+        "arrive_from_h": 8.0,
+        "arrive_to_h": 10.0,
+        "dwell_h": 5.0
+      }
+    ]
+  },
+  {
+    "name": "core_closure",
+    "description": "Baseline with two academic-core car parks closed for construction",
+    "visitor_cars": 300,
+    "closed_zones": ["Academic P1", "Academic P2"]
+  }
+]
